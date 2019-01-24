@@ -18,8 +18,7 @@ void printHelp() {
 
 
 int main(int argc, char * argv[]) {
-	if (argc > 1) {
-		printf("%s\n\n\n", argv[1]);		
+	if (argc > 1) {		
 		for (int i = 1; i<argc; i++) {
 			if (strcmp(argv[i], "-t")==0) {				
 				time_t tnow;  /* time now */
@@ -37,11 +36,13 @@ int main(int argc, char * argv[]) {
 					perror(NULL);
 					exit(0);
 				}
-				printf("sysname %s\n", u.sysname);
+				printf("OS=%s %s\n", u.sysname, u.release);
+				/*
 				printf("nodename %s\n", u.nodename);
 				printf("release %s\n", u.release);
 				printf("version %s\n", u.version);
 				printf("machine %s\n", u.machine);
+				*/
 			} else if (strcmp(argv[i], "-p")==0) {
 
 				printf("Parent Process id of current process : %d\n", getppid());

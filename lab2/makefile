@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -std=c11
 
-TARGET = lab1.c
-exicutableName = lab1
+TARGET = lab2.c
+exicutableName = lab2
 
 
 .PHONY : build
@@ -18,4 +18,4 @@ clean:
 .PHONY : run
 	
 run: 
-	@echo "Hello World";
+	./build/$(exicutableName)
