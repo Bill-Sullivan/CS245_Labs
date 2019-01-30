@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -std=c11
+CFLAGS = -std=c11 -g
 
 TARGET = lab2.c
 exicutableName = lab2
@@ -19,3 +19,7 @@ clean:
 	
 run: 
 	./build/$(exicutableName)
+
+.PHONY : debug
+debug: 
+	gdb /build/$(exicutableName)
