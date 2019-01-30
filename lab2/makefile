@@ -22,4 +22,4 @@ run:
 
 .PHONY : debug
 debug: 
-	gdb /build/$(exicutableName)
+	gdb build/$(exicutableName)
