@@ -38,7 +38,7 @@ int main(void) {
 	char inBuf[MAX_LENGTH];
 	LinkedList* list = LinkedListConstructor();
 	
-	while (1) {
+	for (;;) {
 		if (fgets(inBuf, MAX_LENGTH, stdin) != NULL) {
 			//removeNewline(inBuf, MAX_LENGTH);
 			filter(inBuf, MAX_LENGTH);
@@ -63,7 +63,7 @@ int main(void) {
 					list->newNext(list, inBuf);
 				}
 			}
-			list->printList(list);
+			//list->printList(list);
 			/*
 			if (strcmp("a", inBuf) == 0) {
 				while(strcmp(list->curr->word.word, "a") !=0) {
@@ -73,7 +73,9 @@ int main(void) {
 				list->curr = list->tail;
 			}
 			*/
-		}
+		} else {
+			break;
+		}		
 	}
-	
+	list->printList(list);	
 }
