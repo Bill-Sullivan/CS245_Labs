@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -std=c11 -g
+CFLAGS = -std=c11 -ggdb
 
 TARGET = lab2.c
 exicutableName = lab2
